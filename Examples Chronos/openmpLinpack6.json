@@ -1,0 +1,25 @@
+{
+  "schedule": "R14//PT2M",
+  "name": "openmpLinpack6",
+  "container": {
+      "type": "DOCKER",
+      "image": "serlophug/openmplinpack",
+      "forcePullImage": true,
+      "volumes": [
+      {
+        "containerPath": "/shared/",
+        "hostPath": "/home/users/shared/serlophug/",
+        "mode": "RW"
+      } ]
+  },
+  "cpus": "1",
+  "mem": "500",
+  "command": "/linpack_openmp 3500",
+  "owner": "serlophug",
+  "async": "false",
+  "qos":{
+      "duration": 80,
+      "desv_deadline": 0.2,
+      "deadline": 1800
+  }
+}
