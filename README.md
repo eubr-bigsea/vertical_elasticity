@@ -71,18 +71,15 @@ QoS is defined in the job specification file. Three parameters are needed:
 
 ``` json
 {
-        ...
-
         "qos" : {
                 "duration": 600,
                 "desv_deadline": 0.8,
                 "deadline": 350
 
         }
-
-        ...
 }
 ```
+
 </p>
 
 ## Credential files
